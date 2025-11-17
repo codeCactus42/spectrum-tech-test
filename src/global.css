@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @import "uniwind";
 
+@import './theme/spectrum.css';
+@import 'heroui-native/styles';
+@import './theme/spectrum.css';
+
+@source '../node_modules/heroui-native/lib';
+
 @theme {
   --font-sans: 'DMSans-Regular';
   --font-sans-semibold: 'DMSans-SemiBold';
