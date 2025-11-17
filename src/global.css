@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @import "uniwind";
+
+@theme {
+  --font-sans: 'DMSans-Regular';
+  --font-sans-semibold: 'DMSans-SemiBold';
+  --font-sans-bold: 'DMSans-Bold';
+}
