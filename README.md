@@ -1,61 +1,81 @@
-# Starter Template with React Navigation
+# Spectrum Tech Test
 
-This is a minimal starter template for React Native apps using Expo and React Navigation.
+A React Native appointment booking application featuring a polished multi-step form flow with custom theming and validation.
 
-## Launch your own
+## Tech Stack
 
-[![Launch with Expo](https://github.com/expo/examples/blob/master/.gh-assets/launch.svg?raw=true)](https://launch.expo.dev/?github=https://github.com/expo/examples/tree/master/with-react-navigation)
+- **React Native** 0.81.4 with **Expo** 54
+- **TypeScript** (strict mode)
+- **HeroUI Native** - React Native component library
+- **TailwindCSS** via Uniwind - Native styling
+- **React Navigation** 7.x - Native Stack
+- **react-hook-form** + **Zod** - Form management and validation
+- **Zustand** - State management
 
-It includes the following:
+## Features
 
-- Example [Native Stack](https://reactnavigation.org/docs/native-stack-navigator) with a nested [Bottom Tab](https://reactnavigation.org/docs/bottom-tab-navigator)
-- Web support with [React Native for Web](https://necolas.github.io/react-native-web/)
-- TypeScript support and configured for React Navigation
-- Automatic [deep link](https://reactnavigation.org/docs/deep-linking) and [URL handling configuration](https://reactnavigation.org/docs/configuring-links)
-- Theme support [based on system appearance](https://reactnavigation.org/docs/themes/#using-the-operating-system-preferences)
-- Expo [Development Build](https://docs.expo.dev/develop/development-builds/introduction/) with [Continuous Native Generation](https://docs.expo.dev/workflow/continuous-native-generation/)
-- Edge-to-edge configured on Android with [`react-native-edge-to-edge`](https://www.npmjs.com/package/react-native-edge-to-edge)
+**Appointment Booking Flow**
+- Multi-step form for GP appointment booking
+- Two-step process: GP details → Appointment format selection
+- Real-time form validation with Zod schemas
+- Progress indicator and navigation controls
+
+**Custom Components**
+- `MultiStepForm` - Reusable compound component with integrated validation
+- `BrandLogo` - Spectrum branding component
+- `ProgressBar` - Visual progress indicator
+
+**Design System**
+- Custom Spectrum color palette
+- Light/dark mode support with automatic system detection
+- DM Sans custom typography
+- Edge-to-edge layout on Android
 
 ## Getting Started
 
-1. Create a new project using this template:
+Install dependencies:
+```sh
+npm install
+```
 
-   ```sh
-   npx create-expo-app --example with-react-navigation
-   yarn create expo-app --example with-react-navigation
-   pnpm create expo-app --example with-react-navigation
-   bun create expo-app --example with-react-navigation
-   ```
+Start the development server:
+```sh
+npm start
+```
 
-## Running the app
+Run on platforms:
+```sh
+npm run ios     # iOS simulator
+npm run android # Android emulator
+npm run web     # Web browser
+```
 
-- Install the dependencies:
+## Project Structure
 
-  ```sh
-  npx expo install
-  ```
+```
+src/
+├── features/appointments/       # Appointment booking feature
+│   ├── screens/                # Booking screens
+│   └── components/             # Feature-specific components
+├── components/                 # Shared components
+│   └── multi-step-form/        # Compound form component
+├── navigation/                 # Navigation configuration
+└── theme/                      # Custom Spectrum theme
+```
 
-- Start the development server:
+## Key Highlights
 
-  ```sh
-  npx expo start
-  ```
+- **Compound component pattern** for flexible, reusable forms
+- **Feature-based architecture** for scalable organization
+- **Strict TypeScript** with path aliases (`@/*`)
+- **Modern React Native** architecture enabled
+- **Custom theming** with CSS variables for light/dark modes
 
-- Build and run iOS and Android development builds:
+## Known Issues
 
-  ```sh
-  npm run ios
-  # or
-  npm run android
-  ```
+### iOS: PagerView Swipe Gestures
+The multi-step form uses `react-native-pager-view` with `scrollEnabled={false}` to prevent manual swiping between steps (navigation is controlled via Next/Previous buttons only). However, there's a known bug in `react-native-pager-view` where `scrollEnabled={false}` doesn't prevent swipe gestures on ExpoGo.
 
-- In the terminal running the development server, press `i` to open the iOS simulator, `a` to open the Android device or emulator, or `w` to open the web browser.
+**Tracking**: [react-native-pager-view#1029](https://github.com/callstack/react-native-pager-view/issues/1029)
 
-## Resources
 
-- [React Navigation documentation](https://reactnavigation.org/)
-- [Expo documentation](https://docs.expo.dev/)
-
----
-
-Demo assets are from [lucide.dev](https://lucide.dev/)
