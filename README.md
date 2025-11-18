@@ -1,3 +1,5 @@
+https://github.com/user-attachments/assets/dccd7122-5f03-407f-adbf-91bbae21c2e0
+
 # Spectrum Tech Test
 
 A React Native appointment booking application featuring a polished multi-step form flow with custom theming and validation.
