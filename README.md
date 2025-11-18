@@ -72,7 +72,7 @@ src/
 ## Known Issue ⚠️
 
 ### iOS: PagerView Swipe Gestures
-The multi-step form uses `react-native-pager-view` with `scrollEnabled={false}` to prevent manual swiping between steps (navigation is controlled via Next/Previous buttons only). However, there's a known bug in `react-native-pager-view` where `scrollEnabled={false}` doesn't prevent swipe gestures on ExpoGo.
+The multi-step form uses `react-native-pager-view` with `scrollEnabled={false}` to prevent manual swiping between steps (navigation is controlled via Next/Previous buttons only). However, there's a known bug in `react-native-pager-view` where `scrollEnabled={false}` doesn't prevent swipe gestures on `ExpoGo`.
 
 **Tracking**: [react-native-pager-view#1029](https://github.com/callstack/react-native-pager-view/issues/1029)
 
