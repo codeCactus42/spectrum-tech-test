@@ -66,16 +66,15 @@ Install dependencies:
 npm install
 ```
 
-Start the development server:
+Run using ExpoGo :
 ```sh
-npm start
+npx expo start 
 ```
 
 Run on platforms:
 ```sh
-npm run ios     # iOS simulator
-npm run android # Android emulator
-npm run web     # Web browser
+npx expo run:ios     # iOS simulator
+npx expo run:android  # Android emulator
 ```
 
 ## ⚠️ Known Issue
