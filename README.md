@@ -7,12 +7,10 @@ A React Native appointment booking application featuring a polished multi-step f
 ## Tech Stack
 
 - **React Native** 0.81.4 with **Expo** 54
-- **TypeScript** (strict mode)
 - **HeroUI Native** - React Native component library
 - **TailwindCSS** via Uniwind - Native styling
 - **React Navigation** 7.x - Native Stack
 - **react-hook-form** + **Zod** - Form management and validation
-- **Zustand** - State management
 
 ## Features
 
@@ -69,11 +67,9 @@ src/
 
 - **Compound component pattern** for flexible, reusable forms
 - **Feature-based architecture** for scalable organization
-- **Strict TypeScript** with path aliases (`@/*`)
-- **Modern React Native** architecture enabled
 - **Custom theming** with CSS variables for light/dark modes
 
-## Known Issues
+## Known Issues ⚠️
 
 ### iOS: PagerView Swipe Gestures
 The multi-step form uses `react-native-pager-view` with `scrollEnabled={false}` to prevent manual swiping between steps (navigation is controlled via Next/Previous buttons only). However, there's a known bug in `react-native-pager-view` where `scrollEnabled={false}` doesn't prevent swipe gestures on ExpoGo.
