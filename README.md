@@ -1,4 +1,4 @@
-https://github.com/user-attachments/assets/dccd7122-5f03-407f-adbf-91bbae21c2e0
+https://github.com/user-attachments/assets/54ca0d76-279c-4074-9e50-1d8be99a2440
 
 # Spectrum Tech Test
 
@@ -22,14 +22,23 @@ A React Native appointment booking application featuring a polished multi-step f
 
 **Custom Components**
 - `MultiStepForm` - Reusable compound component with integrated validation
-- `BrandLogo` - Spectrum branding component
 - `ProgressBar` - Visual progress indicator
 
-**Design System**
-- Custom Spectrum color palette
-- Light/dark mode support with automatic system detection
-- DM Sans custom typography
-- Edge-to-edge layout on Android
+## MultiStepForm Component
+
+A reusable compound component for building multi-step forms with integrated Zod validation, state management, and navigation controls.
+
+```tsx
+<MultiStepForm {...formProps}>
+  <MultiStepForm.Step schema={step1Schema}>
+    <YourStepContent />
+  </MultiStepForm.Step>
+  <MultiStepForm.Step schema={step2Schema}>
+    <YourStepContent />
+  </MultiStepForm.Step>
+  {/* Add unlimited steps as needed */}
+</MultiStepForm>
+```
 
 ## Getting Started
 
@@ -72,7 +81,7 @@ src/
 ## Known Issue ⚠️
 
 ### iOS: PagerView Swipe Gestures
-The multi-step form uses `react-native-pager-view` with `scrollEnabled={false}` to prevent manual swiping between steps (navigation is controlled via Next/Previous buttons only). However, there's a known bug in `react-native-pager-view` where `scrollEnabled={false}` doesn't prevent swipe gestures on `ExpoGo`.
+The multi-step form uses `react-native-pager-view` with `scrollEnabled={false}` to prevent manual swiping between steps (navigation is controlled via Next/Previous buttons only). However, there's a known bug in `react-native-pager-view` where `scrollEnabled={false}` doesn't prevent swipe gestures on ExpoGo.
 
 **Tracking**: [react-native-pager-view#1029](https://github.com/callstack/react-native-pager-view/issues/1029)
 
