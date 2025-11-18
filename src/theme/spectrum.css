@@ -1,105 +1,115 @@
 @layer theme {
     :root {
-      @variant light {
-        --background: #ffffff;
-        --foreground: #1e1e22;
-  
-        --surface: #ffffff;
-        --surface-foreground: #1e1e22;
-  
-        --overlay: #ffffff;
-        --overlay-foreground: #1e1e22;
-  
-        --muted: #797b89;
-  
-        --default: #ffffff;
-        --default-foreground: #1e1e22;
-  
-        --accent: #604bff;
-        --accent-foreground: #ffffff;
-  
-        --field-background: #ffffff;
-        --field-foreground: #1e1e22;
-        --field-placeholder: #797b89;
-        --field-border: #aeb0bd;
-  
-        --success: #30de7a;
-        --success-foreground: #1e1e22;
-  
-        --warning: #ffef99;
-        --warning-foreground: #594b00;
-  
-        --danger: #ff7b7b;
-        --danger-foreground: #1e1e22;
-  
-        --segment: #ffffff;
-        --segment-foreground: #1e1e22;
-  
-        --button-tertiary: rgba(30, 30, 34, 0.05);
-  
-        --border: #aeb0bd;
-        --divider: #dbdbdb;
-        --link: #604bff;
-  
-        --text-primary: #1e1e22;
-        --text-secondary: #797b89;
-  
-        --progress-inactive: #dbdbdb;
-        --progress-active: #604bff;
-      }
+        @variant light {
+            --background: #ffffff;
+            --foreground: #1e1e22;
 
-      @variant dark {
-        --background: #132030;
-        --foreground: #ffffff;
-      
-        --surface: #243447;
-        --surface-foreground: #ffffff;
-      
-        --overlay: #243447;
-        --overlay-foreground: #ffffff;
-      
-        --muted: #8b9bad;
-      
-        --default: #243447;
-        --default-foreground: #ffffff;
-      
-        --accent: #513fde;
-        --accent-foreground: #ffffff;
-      
-        --field-background: #f5f5f5;
-        --field-foreground: #1a2332;
-        --field-placeholder: #6b7280;
-        --field-border: #e5e7eb;
-      
-        --field-border-radius: 16px;
-      
-        --field-padding-y: 20px;
-        --field-padding-x: 24px;
-        --field-height: 60px;
-      
-        --success: #30de7a;
-        --success-foreground: #ffffff;
-      
-        --warning: #ffef99;
-        --warning-foreground: #594b00;
-      
-        --danger: #ff7b7b;
-        --danger-foreground: #ffffff;
-      
-        --segment: #243447;
-        --segment-foreground: #ffffff;
-      
-        --button-tertiary: rgba(255, 255, 255, 0.1);
-      
-        --border: #2d3e54;
-        --divider: #2d3e54;
-        --link: #ffffff;
-      
-        --text-primary: #ffffff;
-        --text-secondary: #8b9bad;
-      
-        --progress-inactive: #2d3e54;
-        --progress-active: #8b7aff;
-      }
+            --surface: #ffffff;
+            --surface-foreground: #1e1e22;
+
+            --overlay: #ffffff;
+            --overlay-foreground: #1e1e22;
+
+            --muted: #797b89;
+
+            --default: #ffffff;
+            --default-foreground: #1e1e22;
+
+            --accent: #604bff;
+            --accent-foreground: #ffffff;
+
+            --field-background: #ffffff;
+            --field-foreground: #1e1e22;
+            --field-placeholder: #797b89;
+            --field-border: #aeb0bd;
+
+            --success: #30de7a;
+            --success-foreground: #1e1e22;
+
+            --warning: #ffef99;
+            --warning-foreground: #594b00;
+
+            --danger: #bb2124;
+            --danger-foreground: #1e1e22;
+
+            --segment: #ffffff;
+            --segment-foreground: #1e1e22;
+
+            --button-tertiary: rgba(30, 30, 34, 0.05);
+
+            --border: #aeb0bd;
+            --divider: #dbdbdb;
+            --link: #604bff;
+
+            --text-primary: #1e1e22;
+            --text-secondary: #797b89;
+
+            --progress-inactive: #dbdbdb;
+            --progress-active: #604bff;
+        }
+
+        @variant dark {
+            --background: #132030;
+            --foreground: #ffffff;
+
+            --surface: #243447;
+            --surface-foreground: #ffffff;
+
+            --overlay: #243447;
+            --overlay-foreground: #ffffff;
+
+            --muted: #8b9bad;
+
+            --default: #243447;
+            --default-foreground: #ffffff;
+
+            --accent: #513fde;
+            --accent-foreground: #ffffff;
+
+            --field-background: #f5f5f5;
+            --field-foreground: #1a2332;
+            --field-placeholder: #6b7280;
+            --field-border: #e5e7eb;
+
+            --field-border-radius: 16px;
+
+            --field-padding-y: 20px;
+            --field-padding-x: 24px;
+            --field-height: 60px;
+
+            --success: #30de7a;
+            --success-foreground: #ffffff;
+
+            --warning: #ffef99;
+            --warning-foreground: #594b00;
+
+            --danger: #ff7b7b;
+            --danger-foreground: #ffffff;
+
+            --segment: #243447;
+            --segment-foreground: #ffffff;
+
+            --button-tertiary: rgba(255, 255, 255, 0.1);
+
+            --border: #2d3e54;
+            --divider: #2d3e54;
+            --link: #ffffff;
+
+            --text-primary: #ffffff;
+            --text-secondary: #8b9bad;
+
+            --progress-inactive: #2d3e54;
+            --progress-active: #8b7aff;
+        }
     }
-  }
+}
+
+@layer utilities {
+    .bg-progress-inactive {
+        background-color: var(--progress-inactive);
+    }
+
+    .bg-progress-active {
+        background-color: var(--progress-active);
+    }
+}
