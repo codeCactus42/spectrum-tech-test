@@ -1,16 +1,12 @@
 import type { ReactElement, ReactNode } from 'react';
 import type { TextInputProps } from 'react-native';
 import type { ZodSchema } from 'zod';
+import type { UseFormReturn } from 'react-hook-form';
 
 export interface MultiStepFormProps {
   children: ReactElement<StepProps>[];
-  data: Record<string, any>;
-  currentStep: number;
-  errors?: Record<string, string>;
-  onDataChange: (data: Record<string, any>) => void;
-  onStepChange: (step: number) => void;
-  onErrorsChange?: (errors: Record<string, string>) => void;
-  onComplete: (data: Record<string, any>) => void;
+  form: UseFormReturn<any>;
+  onComplete: (data: any) => void;
   onClose?: () => void;
 }
 

@@ -2,7 +2,9 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import type { NavigationProp } from "@react-navigation/native";
 import type { RootStackParamList } from "../../../navigation";
-import { MultiStepForm, useMultiStepForm } from "@/components/multi-step-form";
+import { MultiStepForm } from "@/components/multi-step-form";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { AppointmentFormatStep } from "../components/appointment-format-step";
 import { GpDetailsStep } from "../components/gp-details-step";
@@ -22,11 +24,17 @@ const appointmentSchema = z.object({
   }),
 });
 
+const formSchema = gpSchema.merge(appointmentSchema);
+
 export default function BookAppointmentScreen() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-  const form = useMultiStepForm();
 
-  const handleComplete = (data: Record<string, any>) => {
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    mode: "onChange",
+  });
+
+  const handleComplete = (data: any) => {
     console.log("Form submitted:", data);
     navigation.navigate("BookingConfirmation");
   };
@@ -37,12 +45,7 @@ export default function BookAppointmentScreen() {
 
   return (
     <MultiStepForm
-      data={form.data}
-      currentStep={form.currentStep}
-      errors={form.errors}
-      onDataChange={form.setData}
-      onStepChange={form.setCurrentStep}
-      onErrorsChange={form.setErrors}
+      form={form}
       onComplete={handleComplete}
       onClose={handleClose}
     >
